@@ -1,0 +1,8 @@
+Date: December 19. 2025
+
+Issue:
+--> Solution:
+
+Issue: Create a new branch from the local environment
+--> Solution: Run the following in the command line
+git checkout -b [NEW_BRANCH_NAME]
