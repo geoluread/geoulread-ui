@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>General Page — Geoulread UI</title>
+  <meta name="description" content="A simple, general-purpose HTML page template." />
+  <style>
+    :root{ --bg:#0f1724; --card:#0b1320; --muted:#9aa4b2; --accent:#4f46e5; --text:#e6eef8 }
+    @media (prefers-color-scheme:light){ :root{ --bg:#f6f8fb; --card:#ffffff; --muted:#5b6b7a; --accent:#4f46e5; --text:#0b1220 }}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,Segoe UI,Roboto,"Helvetica Neue",Arial;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased}
+    .wrap{max-width:1100px;margin:0 auto;padding:28px}
+    header{display:flex;align-items:center;justify-content:space-between;margin-bottom:28px}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:44px;height:44px;border-radius:8px;background:linear-gradient(135deg,var(--accent),#06b6d4);display:flex;align-items:center;justify-content:center;font-weight:700}
+    nav{display:flex;gap:18px;align-items:center}
+    a{color:var(--text);text-decoration:none}
+    .muted{color:var(--muted);font-size:0.95rem}
+    .hero{display:grid;grid-template-columns:1fr 340px;gap:28px;align-items:start;margin-bottom:28px}
+    .card{background:var(--card);padding:20px;border-radius:12px;box-shadow:0 6px 18px rgba(2,6,23,0.45)}
+    h1{margin:0 0 8px 0;font-size:1.6rem}
+    p.lead{margin:0 0 16px 0;color:var(--muted)}
+    .features{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:18px}
+    .feature{padding:12px;border-radius:10px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent)}
+    footer{margin-top:36px;padding-top:18px;border-top:1px solid rgba(255,255,255,0.04);display:flex;justify-content:space-between;align-items:center}
+    .btn{display:inline-block;padding:8px 12px;border-radius:8px;background:var(--accent);color:white;text-decoration:none;font-weight:600}
+    form{display:flex;flex-direction:column;gap:8px}
+    input,textarea{padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:var(--text)}
+    @media (max-width:880px){ .hero{grid-template-columns:1fr} nav{display:none} }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo">G</div>
+        <div>
+          <div style="font-weight:700">Geoulread</div>
+          <div class="muted" style="margin-top:2px;font-size:0.85rem">General template</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#features">Features</a>
+        <a href="#about">About</a>
+        <a href="#contact" class="btn">Contact</a>
+      </nav>
+    </header>
+
+    <main class="hero">
+      <section class="card">
+        <h1>Simple, responsive HTML template</h1>
+        <p class="lead">A lightweight starting page with an accessible layout, clear typography, and a small contact form. Copy or adapt for prototypes, docs, or small sites.</p>
+
+        <div id="features" class="features">
+          <div class="feature">
+            <strong>Responsive</strong>
+            <div class="muted">Works across phones, tablets, and desktops.</div>
+          </div>
+          <div class="feature">
+            <strong>Accessible</strong>
+            <div class="muted">Semantic markup and readable contrast.</div>
+          </div>
+          <div class="feature">
+            <strong>Customizable</strong>
+            <div class="muted">Colors, layout, and content are easy to change.</div>
+          </div>
+        </div>
+
+        <section id="about" style="margin-top:18px">
+          <h2 style="font-size:1rem;margin:0 0 8px 0">How to use</h2>
+          <ol style="margin:0 0 8px 20px;color:var(--muted)">
+            <li>Open `general.html` in a browser.</li>
+            <li>Edit the content, replace the logo and copy as needed.</li>
+            <li>Extend styles or link an external CSS file for branding.</li>
+          </ol>
+        </section>
+      </section>
+
+      <aside class="card">
+        <h3 style="margin:0 0 10px 0">Contact</h3>
+        <form id="contact" action="#" onsubmit="event.preventDefault();alert('Form submitted — replace with real handler')">
+          <input type="text" name="name" placeholder="Your name" required />
+          <input type="email" name="email" placeholder="your@email.example" required />
+          <textarea name="message" rows="4" placeholder="Message"></textarea>
+          <div style="display:flex;gap:8px;margin-top:8px">
+            <button class="btn" type="submit">Send</button>
+            <button type="button" onclick="document.getElementById('contact').reset()" style="background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--text);padding:8px 12px;border-radius:8px">Reset</button>
+          </div>
+        </form>
+      </aside>
+    </main>
+
+    <footer>
+      <div class="muted">© <span id="year"></span> Geoulread</div>
+      <div>
+        <a href="#" class="muted" style="margin-right:12px">Terms</a>
+        <a href="#" class="muted">Privacy</a>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // Small helper: open in a new tab when Ctrl/Cmd+click
+    document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{if(e.ctrlKey||e.metaKey){e.preventDefault();window.open(a.getAttribute('href')||'about:blank','_blank')}}))
+  </script>
+</body>
+</html>

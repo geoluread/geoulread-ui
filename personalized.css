@@ -1,0 +1,121 @@
+BODY {
+    margin: 20px 0px 20px 0px;
+    background-color: #320641;
+    font-family: Lucida Sans Unicode ,Andale Mono, monospace;
+    font-size: 12pt;
+    font-style: bold;
+}
+
+img {
+  display: block;
+  margin: auto;
+  width: 65%;
+}
+
+.page {
+    display: block;
+    width:75%;
+    overflow: auto;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.div{
+    margin-bottom: 20px;
+}
+
+.pageNavigationBar {
+    /* background-color: #ED6F45; */
+    background-color: #ED734A;
+    color: #FFFFFF;
+    text-align: center;
+    clear: none;
+    min-height: 50px;
+    box-sizing: border-box;
+    padding: 10px;
+    border-radius: 25px;
+    margin-bottom: 20px;
+}
+
+.pageRightPanel {
+  /* #1C7275; */
+  /* background-color: #5A2AEA; */
+    /* background-color: #6F45ED; */
+    background-color: #560A70;
+    float: right;
+    clear: none;
+    width: 15%;
+    box-sizing: border-box;
+    padding: 10px;
+    margin-bottom: 20px;
+    min-width: auto;
+    color:white;
+    font-style: italic bold;
+}
+
+.pageContent {
+    background-color: #ED456F;
+    /* background-color: #F06A8C; */
+    clear: none;
+    min-height: 650px;
+    box-sizing: border-box;
+    padding: 10px;
+    border-radius: 25px;
+    margin-bottom: 20px;
+    min-width: auto;
+
+}
+
+.pageFooter {
+    background-color: #000000;
+    color: #BB18F1;
+    clear: none;
+    min-height: 50px;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 10px;
+    border-radius: 25px;
+}
+
+.rounded-box {
+    border-radius: 25px;
+    /* Rounds all four corners by 25 pixels */
+    border: 2px;
+    padding: 20px;
+}
+
+.flex-container {
+  display: flex; /* Makes the container a flex container, children sit side-by-side by default */
+  width: 75%;
+}
+
+.div1, .div2 {
+
+  /* Add styling for visibility/spacing */
+  padding: 20px;
+  min-height: 650px;
+}
+
+.div1 {
+  margin-right: 10px; /* Adds space between the divs */
+  flex-grow: 1;
+}
+
+.nav-asset{
+    position: static;
+    z-index: 1;    
+    white-space: nowrap;
+    margin: 0px 20px 0px 20px;
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  width: 50px; 
+  height: 50px; 
+  float: left; 
+  margin-right:10px;
+}
