@@ -1,6 +1,6 @@
 BODY {
     margin: 20px 0px 20px 0px;
-    background-color: #320641;
+    background-color: #230C33;
     font-family: Lucida Sans Unicode ,Andale Mono, monospace;
     font-size: 12pt;
     font-style: bold;
@@ -19,6 +19,7 @@ img {
     box-sizing: border-box;
     justify-content: center;
     align-items: center;
+    padding: 20px;
     margin: auto;
 }
 
@@ -28,7 +29,7 @@ img {
 
 .pageNavigationBar {
     /* background-color: #ED6F45; */
-    background-color: #ED734A;
+    background-color: #4e3b31;
     color: #FFFFFF;
     text-align: center;
     clear: none;
@@ -36,14 +37,10 @@ img {
     box-sizing: border-box;
     padding: 10px;
     border-radius: 25px;
-    margin-bottom: 20px;
 }
 
 .pageRightPanel {
-  /* #1C7275; */
-  /* background-color: #5A2AEA; */
-    /* background-color: #6F45ED; */
-    background-color: #560A70;
+    background-color: #a6809d;
     float: right;
     clear: none;
     width: 15%;
@@ -51,20 +48,19 @@ img {
     padding: 10px;
     margin-bottom: 20px;
     min-width: auto;
-    color:white;
     font-style: italic bold;
 }
 
 .pageContent {
-    background-color: #ED456F;
-    /* background-color: #F06A8C; */
+    background-color: #9984d4;
     clear: none;
-    min-height: 650px;
+/*    min-height: 650px;*/
     box-sizing: border-box;
     padding: 10px;
     border-radius: 25px;
     margin-bottom: 20px;
-    min-width: auto;
+/*    min-width: auto;*/
+    width: 75%;
 
 }
 
@@ -77,6 +73,7 @@ img {
     box-sizing: border-box;
     padding: 10px;
     border-radius: 25px;
+    margin-top: -25px
 }
 
 .rounded-box {
