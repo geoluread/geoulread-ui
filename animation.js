@@ -1,8 +1,30 @@
-// Get the audio element
-var audio = document.getElementById("myAudio");
 
-// You can also set the volume immediately when the page loads
-// Make sure the script runs after the audio element is loaded
+var justinTrack = new Audio("assets\\different_world_type_ beat_2.m4a"); // Justin song :)
+
 window.onload = function() {
-    audio.volume = 0.15; // Example: set volume to 20% on load
+    
 };
+
+var musicState = document.getElementById('theMusic')
+var musicOff = true;
+
+musicState.addEventListener('click', () => {
+
+    console.log(musicOff)
+
+    if(musicOff == false){
+        musicState.src="assets/music-off.png";
+        justinTrack.pause();
+        musicOff = true;
+    }
+    else if(musicOff == true){
+        musicState.src="assets/music-on.gif";
+        justinTrack.currentTime = 0;
+        justinTrack.volume = .25;
+        justinTrack.loop = true;
+        justinTrack.play();
+        musicOff = false;
+    }
+
+    console.log(musicOff)
+});
