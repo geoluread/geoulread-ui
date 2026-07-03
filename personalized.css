@@ -1,11 +1,14 @@
 BODY {
     margin: 20px 0px 20px 0px;
-    /* background-color: #845086; */
-    background-image: url('assets/blue-stars-2.gif');
+    background-color: #33545b;
+    background-image: url('assets/blue-stars-static-transparent.png');
+    background-size: 300px;
+    background-repeat: repeat;
     font-family: monospace;
     font-size: 12pt;
-    font-style: bold;
 }
+
+
 
 /* img {
   display: flexbox;
@@ -15,7 +18,7 @@ BODY {
 
 .page {
     display: block;
-    width:45%;
+    width:50%;
     overflow: hidden;
     box-sizing: border-box;
     justify-content: center;
@@ -30,12 +33,39 @@ BODY {
     justify-content: center;
 }
 
+#headerText{
+  color:#e8ea90;
+  font-size: 12pt;
+  font-style: bold;
+  font-size: 14pt;
+}
+
 #theMusic {
   display: flexbox;
   margin: auto;
-  width: 5%;
+  width: 6.5%;
   position: fixed;
   justify-content: space-around;
   bottom: 0;
   left: 0;
 }
+
+.flex-container  {
+  display: flex; /* Makes the container a flex container, children sit side-by-side by default */
+  justify-content: center;
+  padding-top: 1.5%;
+}
+
+.navigation-buttons img {
+  background-color: transparent;
+  width: 100%;
+}
+
+.navigation-buttons button {
+  background-color: transparent;
+  margin: 20px;
+  height: 100px;
+  width: 200px;
+  /* border: none; */
+}
+
