@@ -28,9 +28,16 @@ musicState.addEventListener('click', () => {
 });
 
 
+
+function aboutClicked(){
+   
+}
+
 var aboutButtonState = document.getElementById('aboutme');
 var aboutButton = true;
 aboutButtonState.addEventListener('click', () => {
+
+   aboutButtonState.src="assets"
 
    console.log("About Me Button Selected")
 });
