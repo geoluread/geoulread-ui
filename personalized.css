@@ -6,26 +6,25 @@ BODY {
     background-repeat: repeat;
     font-family: monospace;
     font-size: 12pt;
+    font-weight: bold;
 }
 
+span {
+  padding-top: 5px;
+}
 
-
-/* img {
-  display: flexbox;
-  margin: auto;
-  width: 65%;
+/* div {
+  border: 2px dashed yellow;
 } */
 
 .page {
     display: block;
     width:50%;
-    overflow: hidden;
     box-sizing: border-box;
     justify-content: center;
     align-items: center;
     padding: 10px;
     margin: auto;
-    font-weight: bold;
 }
 
 .centered_text {
@@ -35,9 +34,8 @@ BODY {
 
 #headerText{
   color:#e8ea90;
-  font-size: 12pt;
-  font-style: bold;
   font-size: 14pt;
+  font-weight: bold;
 }
 
 #theMusic {
@@ -50,22 +48,88 @@ BODY {
   left: 0;
 }
 
-.flex-container  {
+/* Used for navigation buttons */
+.nav-container  {
   display: flex; /* Makes the container a flex container, children sit side-by-side by default */
   justify-content: center;
-  padding-top: 1.5%;
 }
 
 .navigation-buttons img {
   background-color: transparent;
-  width: 100%;
+  width: 75%;
 }
 
 .navigation-buttons button {
   background-color: transparent;
-  margin: 20px;
   height: 100px;
-  width: 200px;
-  /* border: none; */
+  width: 175px;
+  border: none;
 }
 
+.content-section {
+  display: grid;
+  /* width: 50%; */
+  /* grid-template-columns: 50% 50%; */
+  /* margin: 5%; */
+  /* place-self: center; */
+  /* border: 2px solid red; */
+}
+
+#about-div {
+  display: flex; /* Makes the container a flex container, children sit side-by-side by default */
+  justify-content: center;
+  border: 2px solid yellow;
+  align-items: center;
+}
+
+#aboutHeadshot {
+  width:50%;
+  /* border: 2px solid yellow; */
+  margin: 8px;
+  float: left;
+  align: middle;
+}
+
+.pageRightPanel {
+    /* float: right; */
+    /* clear: none;
+    box-sizing: border-box;
+    border: 2px solid yellow;
+    border-radius: 25px;
+    margin: 10%; */
+}
+
+.pageContent {
+    display: flex;
+    clear: none;
+    box-sizing: border-box;
+    border: 2px solid #eda20b;
+    border-radius: 25px;
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+    background-color: #eda20b;
+    margin-left: 25%;
+    margin-right: 25%;
+    align-items: center;
+    height:350px;
+}
+
+
+.pageFooter {
+    background-color: #000000;
+    color: #e8ea90;
+    clear: none;
+    /* min-height: 50px; */
+    text-align: center;
+    box-sizing: border-box;
+    padding: 10px;
+    border-radius: 25px;
+    /* margin-top: -25px; */
+    /* position: fixed; */
+    justify-content: space-around;
+    /* bottom: 0; */
+}
+
+#inner-text {
+  margin: 10px;
+}

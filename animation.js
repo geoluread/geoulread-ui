@@ -2,6 +2,10 @@ window.onload = function() {
     
 };
 
+function home() {
+   location.replace("index.html");
+}
+
 var justinTrack = new Audio("assets\\different_world_type_ beat_2.m4a"); // Justin song :)
 var musicOff = true;
 var musicState = document.getElementById('theMusic')
@@ -27,46 +31,39 @@ musicState.addEventListener('click', () => {
     }
 });
 
+const navButtonMap = new Map();
+navButtonMap.set("aboutBool", false);
+navButtonMap.set("resumeBool", false);
+navButtonMap.set("projectBool", false);
+navButtonMap.set("blogBool", false);
+navButtonMap.set("funBool", false);
+
+const navButtonPage = new Map();
+navButtonPage.set("aboutBool", "about.html");
 
 
-function aboutClicked(){
-   
+function navigationClicked(nodeChild){
+   tagId = nodeChild.firstChild.id;
+   var navButtonState = document.getElementById(tagId);
+
+   var funcTag = tagId+"Bool";
+   var funcBool;
+
+   for(const key of navButtonMap.keys()){
+      if(key.includes(tagId)){
+         funcBool = navButtonMap.get(key);
+      }
+   }
+
+   if(funcBool == true){
+      navButtonState.src="assets/"+tagId+"-usb.png";
+      navButtonMap.set(funcTag,false);
+      location.replace("index.html")
+   }
+   else if(funcBool == false){
+      navButtonState.src="assets/"+tagId+"-sb.png";
+      navButtonMap.set(funcTag,true);
+      location.replace(navButtonPage.get(funcTag))
+   }   
 }
 
-var aboutButtonState = document.getElementById('aboutme');
-var aboutButton = true;
-aboutButtonState.addEventListener('click', () => {
-
-   aboutButtonState.src="assets"
-
-   console.log("About Me Button Selected")
-});
-
-var resumeButtonState = document.getElementById('resume');
-var resumeButton = true;
-resumeButtonState.addEventListener('click', () => {
-
-   console.log("Resume Button Selected")
-});
-
-var projectButtonState = document.getElementById('project');
-var projectButton = true;
-projectButtonState.addEventListener('click', () => {
-
-   console.log("Project Button Selected")
-});
-
-
-var blogButtonState = document.getElementById('blog');
-var blogButton = true;
-blogButtonState.addEventListener('click', () => {
-
-   console.log("Blog Button Selected")
-});
-
-var funButtonState = document.getElementById('fun');
-var funButton = true;
-funButtonState.addEventListener('click', () => {
-
-   console.log("Fun Button Selected")
-});
