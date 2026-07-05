@@ -7,15 +7,15 @@ BODY {
     font-family: monospace;
     font-size: 12pt;
     font-weight: bold;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-span {
+SPAN {
   padding-top: 5px;
 }
-
-/* div {
-  border: 2px dashed yellow;
-} */
 
 .page {
     display: block;
@@ -25,6 +25,8 @@ span {
     align-items: center;
     padding: 10px;
     margin: auto;
+
+    /* flex: 1; */
 }
 
 .centered_text {
@@ -38,20 +40,10 @@ span {
   font-weight: bold;
 }
 
-#theMusic {
-  display: flexbox;
-  margin: auto;
-  width: 6.5%;
-  position: fixed;
-  justify-content: space-around;
-  bottom: 0;
-  left: 0;
-}
-
-/* Used for navigation buttons */
 .nav-container  {
-  display: flex; /* Makes the container a flex container, children sit side-by-side by default */
+  display: flex; 
   justify-content: center;
+  margin-top: -25px;
 }
 
 .navigation-buttons img {
@@ -68,35 +60,6 @@ span {
 
 .content-section {
   display: grid;
-  /* width: 50%; */
-  /* grid-template-columns: 50% 50%; */
-  /* margin: 5%; */
-  /* place-self: center; */
-  /* border: 2px solid red; */
-}
-
-#about-div {
-  display: flex; /* Makes the container a flex container, children sit side-by-side by default */
-  justify-content: center;
-  border: 2px solid yellow;
-  align-items: center;
-}
-
-#aboutHeadshot {
-  width:50%;
-  /* border: 2px solid yellow; */
-  margin: 8px;
-  float: left;
-  align: middle;
-}
-
-.pageRightPanel {
-    /* float: right; */
-    /* clear: none;
-    box-sizing: border-box;
-    border: 2px solid yellow;
-    border-radius: 25px;
-    margin: 10%; */
 }
 
 .pageContent {
@@ -114,22 +77,37 @@ span {
     height:350px;
 }
 
-
-.pageFooter {
-    background-color: #000000;
-    color: #e8ea90;
-    clear: none;
-    /* min-height: 50px; */
-    text-align: center;
-    box-sizing: border-box;
-    padding: 10px;
-    border-radius: 25px;
-    /* margin-top: -25px; */
-    /* position: fixed; */
-    justify-content: space-around;
-    /* bottom: 0; */
+#aboutHeadshot {
+  width:50%;
+  margin: 8px;
+  float: left;
 }
 
 #inner-text {
   margin: 10px;
+}
+
+
+.pageFooter {
+    background-color: #000000;
+    color: #e8ea90;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 10px;
+    border-radius: 25px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 50%;
+
+}
+
+#theMusic {
+  display: flexbox;
+  margin: auto;
+  width: 6.5%;
+  position: fixed;
+  justify-content: space-around;
+  bottom: 0;
+  left: 0;
 }

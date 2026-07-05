@@ -7,6 +7,10 @@ BODY {
     font-style: bold;
 }
 
+.div{
+    margin-bottom: 20px;
+}
+
 .page img {
     display: block;
     width:43%;
@@ -23,32 +27,9 @@ BODY {
     width: 65%;
 }
 
-/* .page {
-    display: block;
-    width:43%;
-    overflow: hidden;
-    box-sizing: border-box;
-    justify-content: center;
-    align-items: center;
-    padding: 5px;
-    margin: auto;
-    font-weight: bold;
-} */
-
-
 .centered_text {
     display: flex;
     justify-content: center;
-}
-
-
-
-
-
-
-
-.div{
-    margin-bottom: 20px;
 }
 
 .pageNavigationBar {
