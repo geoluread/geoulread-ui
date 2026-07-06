@@ -3,10 +3,10 @@ window.onload = function() {
 };
 
 function home() {
-   location.replace("index.html");
+   location.replace("../index.html");
 }
 
-var justinTrack = new Audio("assets\\different_world_type_ beat_2.m4a"); // Justin song :)
+var justinTrack = new Audio("..\\assets\\different_world_type_ beat_2.m4a"); // Justin song :)
 var musicOff = true;
 var musicState = document.getElementById('theMusic')
 
@@ -16,17 +16,17 @@ var musicState = document.getElementById('theMusic')
 musicState.addEventListener('click', () => {
 
     if(musicOff == false){
-        musicState.src="assets/music-off.png";
+        musicState.src="../assets/music-off.png";
         justinTrack.pause();
-        document.body.style.backgroundImage =  'url('+'assets/blue-stars-static-transparent.png'+')';
+        document.body.style.backgroundImage =  'url('+'../assets/blue-stars-static-transparent.png'+')';
         musicOff = true;
     }
     else if(musicOff == true){
-        musicState.src="assets/music-on.gif";
+        musicState.src="../assets/music-on.gif";
         justinTrack.volume = .25;
         justinTrack.loop = true;
         justinTrack.play();
-        document.body.style.backgroundImage =  'url('+'assets/blue-stars-transparent.gif'+')';
+        document.body.style.backgroundImage =  'url('+'../assets/blue-stars-transparent.gif'+')';
         musicOff = false;
     }
 });
@@ -39,7 +39,7 @@ navButtonMap.set("blogBool", false);
 navButtonMap.set("funBool", false);
 
 const navButtonPage = new Map();
-navButtonPage.set("aboutBool", "about.html");
+navButtonPage.set("aboutBool", "pages/about.html");
 
 
 function navigationClicked(nodeChild){

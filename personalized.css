@@ -10,23 +10,37 @@ BODY {
 
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
 }
 
 SPAN {
   padding-top: 5px;
 }
 
-.page {
-    display: block;
-    width:50%;
-    box-sizing: border-box;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    margin: auto;
 
-    /* flex: 1; */
+@media only screen and (min-width: 1300px) {
+
+  /* Large screen, non-retina */
+
+}
+
+.page {
+  display: block;
+  width:50%;
+  box-sizing: border-box;
+  padding: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10%;
+  margin-bottom: 2px;
+}
+
+.page-default {
+  display: block;
+  width:50%;
+  box-sizing: border-box;
+  padding: 10px;
+  margin: auto;
+  margin-bottom: 2px;
 }
 
 .centered_text {
@@ -43,7 +57,6 @@ SPAN {
 .nav-container  {
   display: flex; 
   justify-content: center;
-  margin-top: -25px;
 }
 
 .navigation-buttons img {
