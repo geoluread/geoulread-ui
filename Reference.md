@@ -8,3 +8,7 @@ Reference Codes
 - https://github.com/faisalAkhtar/windows-xp/blob/main/desktop.html
 - https://github.com/firwer/winxpsite/tree/main/assets
 - https://www.w3schools.com/colors/colors_picker.asp
+
+
+Possible color scheme
+#5c0033, #aa0962, #ff008d, #e87db8, #ecc6db

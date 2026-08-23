@@ -40,6 +40,7 @@ navButtonMap.set("funBool", false);
 
 const navButtonPage = new Map();
 navButtonPage.set("aboutBool", "pages/about.html");
+navButtonPage.set("resumeBool", "pages/resume.html");
 
 
 function navigationClicked(nodeChild){

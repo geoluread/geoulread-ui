@@ -1,6 +1,6 @@
 BODY {
     margin: 20px 0px 20px 0px;
-    background-color: #5E0034; /* #33545b; */
+    background-color: #33545b;
     background-image: url('assets/blue-stars-static-transparent.png');
     background-size: 300px;
     background-repeat: repeat;
@@ -25,12 +25,12 @@ SPAN {
 
 .page {
   display: block;
-  width:58%;
+  width:50%;
   box-sizing: border-box;
   padding: 10px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 5%;
+  margin-top: 10%;
   margin-bottom: 2px;
 }
 
@@ -49,7 +49,7 @@ SPAN {
 }
 
 #headerText{
-  color: #ecc6db;
+  color:#e8ea90;
   font-size: 14pt;
   font-weight: bold;
 }
@@ -77,17 +77,17 @@ SPAN {
 
 .pageContent {
     display: flex;
+    clear: none;
     box-sizing: border-box;
-    border: 2px solid #ecc6db;
+    border: 2px solid #eda20b;
     border-radius: 25px;
     margin-top: 2.5%;
     margin-bottom: 2.5%;
-    background-color: #ecc6db;;
+    background-color: #eda20b;
     margin-left: 25%;
     margin-right: 25%;
     align-items: center;
-    min-height:450px;
-    padding: 25px;
+    height:350px;
 }
 
 #aboutHeadshot {
@@ -96,16 +96,23 @@ SPAN {
   float: left;
 }
 
-#resumeHeadshot {
-  width:10%;
-  margin: 8px;
-  display: inline-block;
-  vertical-align: top;
-  /* float: left; */
-}
-
 #inner-text {
   margin: 10px;
+}
+
+
+.pageFooter {
+    background-color: #000000;
+    color: #e8ea90;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 10px;
+    border-radius: 25px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 50%;
+
 }
 
 #theMusic {
@@ -116,16 +123,4 @@ SPAN {
   justify-content: space-around;
   bottom: 0;
   left: 0;
-}
-
-.star-bullet {
-  width: 2px;
-}
-
-li::before {
-    background-image: url("/assets/star-bullet.png");
-}
-
-li {
-    background-size: 2px;
 }
