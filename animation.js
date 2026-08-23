@@ -3,7 +3,8 @@ window.onload = function() {
 };
 
 function home() {
-   location.replace("../index.html");
+   if(this !== "index"){location.replace("../index.html");}
+   else{location.replace("index.html");}
 }
 
 var justinTrack = new Audio("..\\assets\\different_world_type_ beat_2.m4a"); // Justin song :)
@@ -39,32 +40,43 @@ navButtonMap.set("blogBool", false);
 navButtonMap.set("funBool", false);
 
 const navButtonPage = new Map();
-navButtonPage.set("aboutBool", "pages/about.html");
-navButtonPage.set("resumeBool", "pages/resume.html");
+navButtonPage.set("aboutBool", "about.html");
+navButtonPage.set("resumeBool", "resume.html");
 
 
 function navigationClicked(nodeChild){
+
+   console.log(window.location.href)
+
    tagId = nodeChild.firstChild.id;
    var navButtonState = document.getElementById(tagId);
 
-   var funcTag = tagId+"Bool";
-   var funcBool;
+   var buttonTag = tagId+"Bool";
+   console.log(buttonTag)
+   var buttonBool;
 
    for(const key of navButtonMap.keys()){
-      if(key.includes(tagId)){
-         funcBool = navButtonMap.get(key);
+      if(key === buttonTag){
+         buttonBool = navButtonMap.get(key);
+         break;
       }
    }
 
-   if(funcBool == true){
+   if(buttonBool == true){
       navButtonState.src="assets/"+tagId+"-usb.png";
-      navButtonMap.set(funcTag,false);
+      navButtonMap.set(buttonTag,false);
       location.replace("index.html")
    }
-   else if(funcBool == false){
+   else if(buttonBool == false){
       navButtonState.src="assets/"+tagId+"-sb.png";
-      navButtonMap.set(funcTag,true);
-      location.replace(navButtonPage.get(funcTag))
+      navButtonMap.set(buttonTag,true);
+      if (window.location.href.includes("pages")){
+         location.replace(navButtonPage.get(buttonTag))
+
+      }else{
+         buttonUrl = "pages/"+navButtonPage.get(buttonTag)
+         location.replace(buttonUrl)
+      }
    }   
 }
 

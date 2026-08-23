@@ -1,6 +1,7 @@
 BODY {
     margin: 20px 0px 20px 0px;
-    background-color: #5E0034; /* #33545b; */
+    background-color: #750041;
+    /* #5E0034; #33545b; */
     background-image: url('assets/blue-stars-static-transparent.png');
     background-size: 300px;
     background-repeat: repeat;
@@ -88,6 +89,7 @@ SPAN {
     align-items: center;
     min-height:450px;
     padding: 25px;
+    overflow: auto;
 }
 
 #aboutHeadshot {
