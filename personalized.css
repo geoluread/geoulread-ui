@@ -110,6 +110,10 @@ SPAN {
   margin: 10px;
 }
 
+.non-flex {
+  display: block;
+}
+
 #theMusic {
   display: flexbox;
   margin: auto;
